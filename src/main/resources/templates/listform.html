@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
+    <link rel="stylesheet" th:href="@{../stylesheet.css}">
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
-<h1>ToDo List Form</h1>
+<h1>To-Do List</h1>
 <form action="#" th:action="@{/process}" th:object="${list}" method="post">
     <input type="hidden" th:field="*{id}"/>
 
@@ -20,7 +21,7 @@
     Priority: <input type="text" th:field="*{priority}"/>
     <span th:if="${#fields.hasErrors('priority')}"
     th:errors="*{dueDate}"></span> <br />
-    <input type="submit" value="Submit">
+    <input id="submit" type="submit" value="Submit">
 </form>
 </body>
 </html>

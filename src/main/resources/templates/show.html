@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
+    <link rel="stylesheet" th:href="@{../stylesheet.css}">
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
-<a href="/">Show All ToDo's</a>
+<a href="/"><p style="text-align: center">Show All ToDo's</p></h1></a>
+<div id="update">
 Task: <span th:text="${list.taskName}"></span><br />
 Due Date: <span th:text="${list.dueDate}"></span> <br />
 Priority: <span th:text="${list.priority}"></span> <br />
 
-<a th:href="@{/delete/{id}(id=${list.id})}">Delete This ToDo</a>
+</div>
+<a th:href="@{/delete/{id}(id=${list.id})}"><p style="text-align: center">Delete This ToDo</p></a>
 </body>
 </html>
